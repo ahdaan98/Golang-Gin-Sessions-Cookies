@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies and Sessions</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    
+    <div>
+        <form action="/handle-click" method="post">
+            <button class="button-27" name="button" value="get-cookies">Get Cookies</button>
+            <button class="button-28" name="button" value="remove-cookies" style="background-color: red;">Remove
+                Cookies</button>
+            <button class="button-27" name="button" value="get-cookie-value"
+                style="background-color: cornflowerblue;">Get Cookie value</button>
+        </form>
+    </div>
+    </div>
+    <h1>Response:</h1>
+        <div>
+            {{ if .message }}
+            <p>{{ .message }}</p>
+            {{ end }}
+
+            {{ if .exampleValue }}
+            <p>{{ .exampleValue }}</p>
+            {{ end }}
+        </div>
+    
+    {{ if .cookieValue }}
+    <p>Cookie value: {{ .cookieValue }}</p>
+    {{ end }}
+
+</body>
+
+</html>
